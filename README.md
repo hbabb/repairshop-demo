@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Repair Shop Management System
 
-## Getting Started
+A modern web application for managing repair shop operations, customer information, and ticket tracking. Built with Next.js 15 and React 19.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Passwordless Authentication**: Secure employee access with Kinde authentication
+- **Real-time Ticket Tracking**: View and manage repair tickets in real-time
+- **Customer Management**: Comprehensive customer information storage and retrieval
+- **Role-based Access Control**: Different permission levels for employees, managers, and admins
+- **Responsive Design**: Optimized for desktop with tablet support
+- **Theme Support**: Light and dark mode options
+- **Search & Navigation**: Easy-to-use interface for finding customers and tickets
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: Next.js 15
+- **Frontend**: React 19 (RC), TypeScript, TailwindCSS
+- **UI Components**: Shadcn UI
+- **Database**: Neon (PostgreSQL)
+- **ORM**: Drizzle
+- **Authentication**: Kinde
+- **Form Handling**: React Hook Form, Zod
+- **Data Display**: TanStack Table
+- **Error Tracking**: Sentry
+- **Security**: next-safe-action
+- **Deployment**: Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏗️ Prerequisites
 
-## Learn More
+- Node.js (LTS version)
+- PostgreSQL database (Neon)
+- Kinde account for authentication
+- Sentry account for error tracking
 
-To learn more about Next.js, take a look at the following resources:
+## 🚦 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    git clone [repository-url]
+    cd repair-shop-app
+    ```
 
-## Deploy on Vercel
+2. Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Set up environment variables:
+
+    ```env
+    DATABASE_URL=your_neon_db_url
+    KINDE_CLIENT_ID=your_kinde_client_id
+    KINDE_CLIENT_SECRET=your_kinde_client_secret
+    KINDE_ISSUER_URL=your_kinde_issuer_url
+    SENTRY_DSN=your_sentry_dsn
+    ```
+
+4. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 👥 User Roles
+
+- **Employee**: Can create tickets, view customers, and edit assigned tickets
+- **Manager**: Additional ability to edit and delete all tickets
+- **Admin**: Full system access including user management
+
+## 🔐 Security Features
+
+- Weekly login requirement
+- Immediate access revocation capability
+- Passwordless authentication
+- Type-safe API actions
+- Real-time error tracking and monitoring
+
+## 📱 Supported Platforms
+
+- Desktop (Primary focus)
+- Tablet devices
+- Dark/Light mode support
+
+## 🔧 Support
+
+For technical issues or support requests, please contact:
+
+- [Support Email]
+- [Support Portal]
+
+## 📄 License
+
+[Your License] - See LICENSE file for details
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+---
+
+Built with ❤️ using Next.js and React
