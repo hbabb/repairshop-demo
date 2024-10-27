@@ -2,8 +2,11 @@
 import {withSentryConfig} from "@sentry/nextjs";
 
 const nextConfig = {
-  experimental: {
-    instrumentationHook: true,
+  env: {
+    SENTRY_AUTH_TOKEN: process.env.SENTRY_AUTH_TOKEN,
+    KINDE_SITE_URL: process.env.KINDE_SITE_URL,
+    KINDE_POST_LOGOUT_REDIRECT_URL: process.env.KINDE_POST_LOGOUT_REDIRECT_URL,
+    KINDE_POST_LOGIN_REDIRECT_URL: process.env.KINDE_POST_LOGIN_REDIRECT_URL,
   }
 };
 

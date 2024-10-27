@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
 
 export default function Home() {
   return (
@@ -19,6 +21,12 @@ export default function Home() {
             (555) 555-5555
           </Link>
         </div>
+        <Button
+          className="bg-green-500/80 text-white font-bold rounded-xl w-4/5 sm:max-w-96 mx-auto hover:bg-green-700/80"
+          asChild
+        >
+          <Link href="/login">Employee Login</Link>
+        </Button>
       </main>
     </div>
   );
